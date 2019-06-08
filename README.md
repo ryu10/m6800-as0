@@ -17,6 +17,10 @@ To run as0 on Windows, use Windows10 WSL.
 
 ## Release Notes
 
+### 0.0.2
+
+Test code modified.
+
 ### 0.0.1
 
 Initial release of m6800-as0.

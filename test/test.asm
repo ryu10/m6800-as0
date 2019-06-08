@@ -1,21 +1,5 @@
 * test patterns for Motorola m6800-assembly (as0)
 * 
-* Hello World
-*
-pdata1	equ	$e07e
-*
-*	code
-	org	$0100
-start	ldx	#mesg
-	jsr	pdata1
-	swi
-*
-*	data
-mesg	fcb	13, 10
-	fcc	'HELLO, WORLD'
-	fcb	13, 10, 4
-*	end
-*
 * symbol defs
 val1    equ 254 ; decimal
 val2    equ $fe ; hex

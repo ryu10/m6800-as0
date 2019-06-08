@@ -1,16 +1,19 @@
 # m6800-as0 README
 
-Syntax higlighting for 6800 Assembly ([as0](https://github.com/JimInCA/motorola-6800-assembler)).
+![screenshot](screenshot.png)
+
+Syntax higlighting for 6800 assembly ([as0](https://github.com/JimInCA/motorola-6800-assembler)).
 
 ## Requirements
 
 [motorola-6800-assembler (as0)](https://github.com/JimInCA/motorola-6800-assembler)
+is required for assemble command.
 
-## Known Issue(s)
+To run as0 on Windows, use Windows10 WSL.
+
+## Known Issues
 
 * An empty listing file is generated if no listing option is specified.
-
-* On Windows, WSL and Ubuntu are required (only Windows10 is supporetd). Source files must be saved with EOL=lf.
 
 ## Release Notes
 

@@ -1,6 +1,6 @@
 # m6800-as0 README
 
-![screenshot](screenshot.png)
+![screenshot](https://github.com/ryu10/m6800-as0/blob/master/screenshot.png)
 
 Syntax higlighting for 6800 assembly ([as0](https://github.com/JimInCA/motorola-6800-assembler)).
 

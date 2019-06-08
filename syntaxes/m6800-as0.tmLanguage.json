@@ -1,0 +1,161 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Motorola 6800 Assembly Language",
+  "patterns": [
+    {
+      "include": "#opcodes"
+    },
+    {
+      "include": "#assemble-list"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#directives"
+    },
+    {
+      "include": "#operands"
+    },
+    {
+      "include": "#strings-single"
+    }
+  ],
+  "repository": {
+    "opcodes": {
+      "patterns": [
+        {
+          "match": "\\b(?i)((asl|asr|lsr|rol|ror)([ab])?)\\b",
+          "name": "keyword.control.opcode.shift.m6800-as0"
+        },
+        {
+          "match": "\\b(?i)((add|and|adc|bit|eor|ora|sbc|sub|cmp|lda|sta|psh|pul)[ab])\\b",
+          "name": "keyword.control.opcode.ab.m6800-as0"
+        },
+        {
+          "match": "\\b(?i)((clr|com|dec|inc|neg|tst)([ab])?)\\b",
+          "name": "keyword.control.opcode.abmem.m6800-as0"
+        },
+        {
+          "match": "\\b(?i)(b[ceghlmnprsv][aceilqrst])\\b",
+          "name": "keyword.control.opcode.branch.m6800-as0"
+        },
+        {
+          "match": "\\b(?i)(aba|cba|clc|cli|clv|cpx|cpxa|daa|des|dex|ins|inx|jmp|jsr|lds|ldx|nop|rti|rts|sba|sec|sei|sev|sts|stx|swi|tab|tap|tba|tpa|tsx|txs|wai)\\b",
+          "name": "keyword.control.opcode.misc.m6800-as0"
+        }
+      ]
+    },
+    "assemble-list": {
+      "patterns": [
+        {
+          "match": "^ {5}(([0-9a-f]{2} )*[0-9a-f]{2})",
+          "name": "constant.numeric.list-fcb2.m6800-as0"
+        },
+        {
+          "match": "^(?i)([0-9]* [0-9a-f]* ([0-9a-f]{2} )*)",
+          "name": "constant.numeric.list-assembly-code.m6800-as0"
+        },
+        {
+          "match": "\\b(?i)([0-9a-f]{4})\\b",
+          "name": "constant.numeric.list-xref.m6800-as0"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "^\\*.*$",
+          "name": "comment.line.asterisk.m6800-as0"
+        },
+        {
+          "match": ";.*$",
+          "name": "comment.line.semicolon.m6800-as0"
+        },
+        {
+          "match": " {8}\\*.*$",
+          "name": "comment.line.asterisk.assembly-list.m6800-as0"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.m6800-as0",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.m6800-as0"
+        }
+      ]
+    },
+    "directives": {
+      "patterns": [
+        {
+          "match": "\\b(?i)(end|equ|opt|org|page)\\b",
+          "name": "keyword.control.directive.m6800-as0"
+        },
+        {
+          "match": "\\b(?i)(bsz|fcb|fcc|fdb|fill|rmb|zmb)\\b",
+          "name": "keyword.control.directive.data.m6800-as0"
+        },
+        {
+          "match": "\\b(&|%|\\^|\\*|\\/|\\-|\\+|\\|)",
+          "name": "keyword.function.operator.m6800-as0"
+        }
+      ]
+    },
+    "operands": {
+      "patterns": [
+        {
+          "match": "'.'",
+          "name": "string.quoted.single.singlechar.m6800-as0"
+        },
+        {
+          "match": "'.\\b",
+          "name": "string.quoted.single.onequote.m6800-as0"
+        },
+        {
+          "match": "%[01]+",
+          "name": "constant.numeric.binary.m6800-as0"
+        },
+        {
+          "match": "@[0-7]+",
+          "name": "constant.numeric.octal.m6800-as0"
+        },
+        {
+          "match": "\\b[0-9]+\\b",
+          "name": "constant.numeric.decimal.m6800-as0"
+        },
+        {
+          "match": "(\\$|\\b0x)[A-Fa-f0-9]+\\b",
+          "name": "constant.numeric.hex.m6800-as0"
+        },
+        {
+          "match": "(?i)(,x)\\b",
+          "name": "keyword.operand.indexed.m6800-as0"
+        },
+        {
+          "match": "\\b[\\s\\t]+\\#",
+          "name": "keyword.operand.immediate.m6800-as0"
+        },
+        {
+          "match": "'(;|\\[|\\]|\\$|@|#|!| |%|\\+|\\^|\\&|\\*|\\(|\\)|\\{|\\}|\\\\|\\||\\\"|\\-|\\=|\\,|\\:|\\'|\\<|\\>|\\.|\\?|\\/|\\~|\\`)",
+          "name": "string.quoted.single.symbol.m6800-as0"
+        }
+      ]
+    },
+    "strings-single": {
+      "patterns": [
+        {
+          "match": "('[^']*')",
+          "name": "string.quoted.single.m6800-as0"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.m6800-as0"
+}

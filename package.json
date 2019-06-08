@@ -1,0 +1,107 @@
+{
+  "name": "m6800-as0",
+  "displayName": "M6800 Assembly",
+  "description": "6800 Assembly Syntax Highlighting (as0)",
+  "version": "0.0.1",
+  "publisher": "RyuStudio",
+  "icon": "logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryu10/m6800-as0"
+  },
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:m6800-as0.as0assemble"
+  ],
+  "contributes": {
+    "keybindings": [
+      {
+        "command": "m6800-as0.as0assemble",
+        "key": "ctrl-shift-m",
+        "mac": "cmd-m",
+        "when": "editorTextFocus"
+      }
+    ],
+    "commands": [
+      {
+        "command": "m6800-as0.as0assemble",
+        "title": "AS0: Assemble"
+      }
+    ],
+    "languages": [
+      {
+        "id": "m6800-as0",
+        "aliases": [
+          "6800 Assembly (as0)",
+          "m6800-as0"
+        ],
+        "extensions": [
+          ".asm",
+          ".list",
+          ".out",
+          ".lst"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "m6800-as0",
+        "scopeName": "source.m6800-as0",
+        "path": "./syntaxes/m6800-as0.tmLanguage.json"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "6800 Assembly Syntax Highlighting (as0) configuration",
+      "properties": {
+        "m6800-as0.As0Path": {
+          "type": "string",
+          "default": "/usr/local/bin",
+          "description": "as0 path"
+        },
+        "m6800-as0.Listing": {
+          "type": "boolean",
+          "default": true,
+          "description": "as0 listing option (-l)"
+        },
+        "m6800-as0.ListingExtension": {
+          "type": "string",
+          "default": ".list",
+          "description": "as0 listing file extension (.list, .lst, .out, etc.)"
+        },
+        "m6800-as0.NoListing": {
+          "type": "boolean",
+          "default": false,
+          "description": "as0 no listing option (-nol)"
+        },
+        "m6800-as0.CrossReference": {
+          "type": "boolean",
+          "default": true,
+          "description": "as0 cross reference table option (-cre)"
+        },
+        "m6800-as0.Symbol": {
+          "type": "boolean",
+          "default": true,
+          "description": "as0 symbol table option (-s)"
+        },
+        "m6800-as0.Cycle": {
+          "type": "boolean",
+          "default": false,
+          "description": "as0 cycle count option (-c)"
+        },
+        "m6800-as0.NoCycle": {
+          "type": "boolean",
+          "default": false,
+          "description": "as0 no cycle count option (-noc)"
+        }
+      }
+    }
+  }
+}

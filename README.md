@@ -7,7 +7,7 @@ Syntax higlighting for 6800 assembly ([as0](https://github.com/JimInCA/motorola-
 ## Requirements
 
 [motorola-6800-assembler (as0)](https://github.com/JimInCA/motorola-6800-assembler)
-is required for assemble command.
+for assemble command.
 
 To run as0 on Windows, use Windows10 WSL.
 

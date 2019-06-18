@@ -13,8 +13,9 @@ for assemble command.
 
 * To install and run as0 on Windows, use Windows10 WSL or Cygwin.
 
-* For Cygwin, change M6800-as0 configuration: **As0 Path**, for example, to:
-  * /c/cygwin64/usr/local/bin/
+* Set **As0 Path** to the path which bash.exe can recognize. For example:
+  * /usr/local/bin (for WSL)
+  * /c/cygwin64/usr/local/bin (for Cygwin)
 
 * Set **End of Line Sequence** to **LF** for *.asm source code files.
 

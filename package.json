@@ -64,7 +64,7 @@
         "m6800-as0.As0Path": {
           "type": "string",
           "default": "/usr/local/bin",
-          "description": "as0 path"
+          "description": "as0 path (/usr/local/bin, /c/cygwin64/usr/local/bin, etc.)"
         },
         "m6800-as0.Listing": {
           "type": "boolean",

@@ -25,6 +25,10 @@ for the assemble command.
 
 ## Release Notes
 
+### 0.0.4
+
+Support for source extensions .asm and .s
+
 ### 0.0.3
 
 Updated Readme.

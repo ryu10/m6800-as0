@@ -2,7 +2,7 @@
   "name": "m6800-as0",
   "displayName": "M6800 Assembly",
   "description": "Syntax Highlighting for 6800 Assembly (as0)",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "RyuStudio",
   "icon": "logo.png",
   "repository": {
@@ -43,6 +43,7 @@
         ],
         "extensions": [
           ".asm",
+          ".s",
           ".list",
           ".out",
           ".lst"
@@ -74,7 +75,7 @@
         "m6800-as0.ListingExtension": {
           "type": "string",
           "default": ".list",
-          "description": "as0 listing file extension (.list, .lst, .out, etc.)"
+          "description": "as0 listing output file extension (.list, .lst, .out, etc.)"
         },
         "m6800-as0.NoListing": {
           "type": "boolean",

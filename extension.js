@@ -48,7 +48,7 @@ function activate(global) {
       let baseName = path.basename(srcPath, extName);
       let listingStr = "> " + baseName + listingExtension;
 
-      if (extName == ".asm") {
+      if (extName.toLowerCase() == ".s" || extName.toLowerCase() == ".asm") {
         let platformStr = os.platform();
         if(platformStr == "win32"){ // windows10 + WSL + Ubuntu
           commandPath = commandPath.replace(/\\/g, "/");
@@ -84,7 +84,7 @@ function activate(global) {
         }
       }else{
         // show 'wrong source extension' error mesg
-        vscode.window.showErrorMessage("as0: not .asm source");
+        vscode.window.showErrorMessage("as0: not a source file");
       }
     }
   );

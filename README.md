@@ -25,7 +25,7 @@ for the assemble command.
 
 ## Release Notes
 
-### r0.0.5
+### 0.0.5
 
 Fixed Toggle line comment command
 

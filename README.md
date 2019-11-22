@@ -27,8 +27,34 @@ for the assemble command.
 
 ### 0.0.5
 
-Fixed Toggle line comment command
+M6800 Assembly README
 
+screenshot
+
+Syntax highlighting for 6800 assembly (as0).
+
+Requirements
+
+motorola-6800-assembler (as0) for the assemble command.
+
+Tips for running as0 on Windows
+
+To install and run as0 on Windows, use Windows10 WSL or Cygwin.
+
+Set As0 Path to the path which bash.exe can recognize. For example:
+
+/usr/local/bin (for WSL)
+/c/cygwin64/usr/local/bin (for Cygwin)
+Set End of Line Sequence to LF for *.asm source code files.
+
+Known Issues
+
+An empty listing file is generated if no listing option is specified.
+Release Notes
+
+0.0.5
+
+Limited support for lineComment.
 ### 0.0.4
 
 Support for source extensions .asm and .s

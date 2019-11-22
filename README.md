@@ -25,6 +25,10 @@ for the assemble command.
 
 ## Release Notes
 
+### r0.0.5
+
+Fixed Toggle line comment command
+
 ### 0.0.4
 
 Support for source extensions .asm and .s

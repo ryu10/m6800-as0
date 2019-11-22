@@ -2,7 +2,7 @@
   "name": "m6800-as0",
   "displayName": "M6800 Assembly",
   "description": "Syntax Highlighting for 6800 Assembly (as0)",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "RyuStudio",
   "icon": "logo.png",
   "repository": {
